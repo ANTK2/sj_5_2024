@@ -47,5 +47,4 @@ $db = new Database();
       </svg>
     </button>
   </div>
-</nav>
 </header>
