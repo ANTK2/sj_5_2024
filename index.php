@@ -1,5 +1,6 @@
 <?php include 'parts/header.php';
 ?>
+<br><br><br>
 <div class="container py-5">
     <div class="row">
         <div class="col-lg-9">

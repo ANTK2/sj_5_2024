@@ -16,7 +16,7 @@ class LatestNews {
         $latestArticles = $this->getLatestArticles();
 
         echo '<div class="latest-news">';
-        echo '<h5 class="latest-news-title">LATEST NEWS</h5>';
+        echo '<h5 class="latest-news-title">Najnovšie správy</h5>';
         echo '<ul class="latest-news-list">';
         
         if ($latestArticles) {
