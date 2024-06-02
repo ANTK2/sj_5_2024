@@ -19,15 +19,15 @@ class ArticleDetails {
         $article = $this->getArticleById($id);
 
         if ($article) {
-            echo '<div class="container py-5">';
+            echo '<div class="container py-3">';
             echo '<div class="row">';
             echo '<div class="col-md-12">';
             echo '<div class="article-details">';
-            echo '<img src="' . htmlspecialchars($article['img_path']) . '" class="article-image" alt="Article Image">';
-            echo '<p class="article-text">' . htmlspecialchars($article['date']) . '</p>';
             echo '<h1 class="article-title">' . htmlspecialchars($article['headline']) . '</h1>';
             echo '<h5 class="article-subtitle text-muted">' . htmlspecialchars($article['subhead']) . '</h5>';
-            echo '<div class="article-text">';
+            echo '<img src="' . htmlspecialchars($article['img_path']) . '" class="article-image" alt="Article Image">';
+            echo '<p class="article-text text-muted pb-3"><b>' . htmlspecialchars($article['date']) . '</b></p>';
+            echo '<div class="article-text" style="font-family: \'Times New Roman\', Times, serif !important;">';
             $paragraphs = explode("\n", htmlspecialchars($article['text']));
             foreach ($paragraphs as $paragraph) {
                 echo '<p>' . trim($paragraph) . '</p>';
