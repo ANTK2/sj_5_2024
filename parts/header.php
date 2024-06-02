@@ -25,12 +25,13 @@ $db = new Database();
     </div>
     </a>
     <div class="hidden md:flex space-x-4">
-      <a href="#" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Najnovšie Správy</a>
-      <a href="#" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Zdravie</a>
-      <a href="#" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Šport</a>
-      <a href="#" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Technológie</a>
-      <a href="#" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Životné Prostredie</a>
-      <a href="#" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Ekonomika</a>
+      <a href="index" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Najnovšie Správy</a>
+      <a href="zdravie" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Zdravie</a>
+      <a href="sport" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Šport</a>
+      <a href="politika" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Politika</a>
+      <a href="technologie" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Technológie</a>
+      <a href="zivotne-prostredie" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Životné Prostredie</a>
+      <a href="ekonomika" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Ekonomika</a>
     </div>
     <button class="md:hidden block">
       <svg

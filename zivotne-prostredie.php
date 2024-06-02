@@ -1,6 +1,6 @@
 <?php include_once 'parts/header.php'; ?>
 <?php
-$categoryId = 4;
+$categoryId = 5;
 $articleCategory = new ArticleCategory($db, $categoryId);
 $articleCategory->renderCategoryArticles();
 ?>
