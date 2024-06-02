@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'classes/Database.php';
+require_once 'Database.php';
 
 class LoginProcessor {
     private $db;
@@ -11,7 +11,7 @@ class LoginProcessor {
 
     public function processLogin($name, $password) {
         $conn = $this->db->getConn();
-        $stmt = $conn->prepare("SELECT password FROM accounts WHERE name = ?");
+        $stmt = $conn->prepare("SELECT password FROM account WHERE name = ?");
         $stmt->bind_param("s", $name);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -21,7 +21,7 @@ class LoginProcessor {
             if (password_verify($password, $user['password'])) {
                 $_SESSION['name'] = $name;
                 $_SESSION['loggedin'] = true;
-                header("Location: index.php");
+                header("Location: ../index.php");
                 exit();
             } else {
                 echo "The password you entered was not valid.";
@@ -40,6 +40,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $loginProcessor->processLogin($_POST['name'], $_POST['password']);
     $db->close();
 } else {
-    header("Location: login.php");
+    header("Location: ../login.php");
 }
 ?>

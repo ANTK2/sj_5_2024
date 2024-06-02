@@ -1,20 +1,5 @@
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
+<?php include "parts/header.php";?>
     <div class="flex">
-    <nav class="bg-zinc-900 text-white p-4">
-        <h2 class="text-lg font-bold">Categories</h2>
-        <ul class="mt-2">
-            <li class="py-1">Politics</li>
-            <li class="py-1">Technology</li>
-            <li class="py-1">Sports</li>
-            <li class="py-1">Entertainment</li>
-        </ul>
-    </nav>
     <div class="flex-1 overflow-y-auto p-4">
         <table class="w-full bg-white shadow-md rounded-lg">
             <thead>
@@ -72,5 +57,3 @@
         </button>
     </div>
 </div>
-  </body>
-</html>

@@ -1,5 +1,11 @@
 <?php
 session_start();
+if (basename($_SERVER['PHP_SELF']) !== 'login.php') {
+    if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+        header("Location: login.php");
+        exit();
+    }
+}
 include_once 'classes/autoloader.php';
 $db = new Database();
 ?>
@@ -15,24 +21,15 @@ $db = new Database();
     <title>NovinySlovakia</title>
 </head>
 <body>
-    <header>
-    <nav class="bg-zinc-900 text-white p-4">
+<header>
+<nav class="bg-zinc-900 text-white p-4">
   <div class="mx-auto flex justify-between items-center">
     <a href="index">
     <div class="flex items-center">
-      <img style="max-height:50px; max-width:auto;" src="img/logo.png" alt="Logo" class="mr-2" />
+      <img style="max-height:50px; max-width:auto;" src="../img/logo.png" alt="Logo" class="mr-2" />
       <span class="font-serif text-2xl">NovinySlovakia</span>
     </div>
     </a>
-    <div class="hidden md:flex space-x-4">
-      <a href="index" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Najnovšie Správy</a>
-      <a href="zdravie" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Zdravie</a>
-      <a href="sport" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Šport</a>
-      <a href="politika" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Politika</a>
-      <a href="technologie" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Technológie</a>
-      <a href="zivotne-prostredie" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Životné Prostredie</a>
-      <a href="ekonomika" class="hover:underline hover:bg-zinc-800 hover:text-zinc-300 px-2 py-1 rounded transition-all">Ekonomika</a>
-    </div>
     <button class="md:hidden block">
       <svg
         xmlns="http://www.w3.org/2000/svg"
